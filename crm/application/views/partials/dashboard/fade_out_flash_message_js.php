@@ -1,0 +1,1 @@
+$('.alert-dismissable').delay(3500).fadeOut(800);

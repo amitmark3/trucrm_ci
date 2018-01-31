@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+#SetEnvIf Host trucrm.mark3.in$ CI_ENV=production
+# SetEnvIf Host testing.mark3.in$ CI_ENV=testing
+# SetEnvIf Host localhost$ CI_ENV=development

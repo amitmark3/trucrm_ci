@@ -1,0 +1,14 @@
+{
+	"description" : "Trucrm by Mark3",
+	"require": {
+		"php": ">=5.3.2",
+		"codeigniter/framework": "3.0.*",
+		"stripe/stripe-php": "^3.12",
+		"phpoffice/phpexcel": "^1.8",
+		"kartik-v/bootstrap-fileinput": "^4.3"
+	},
+	"require-dev": {
+        "kenjis/codeigniter-cli": "^0.1.0",
+        "vlucas/phpdotenv": "^2.2"
+	}
+}

@@ -1,0 +1,16 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
+
+$config = array(
+  'protocol' => 'sendmail',
+  'mailpath' => '/usr/sbin/sendmail',
+  'charset' => 'iso-8859-1',
+  'smtp_host' => '',
+  'smtp_port' => '',
+  'smtp_user' => '',
+  'smtp_pass' => '',
+  'crlf' => "\r\n",
+  'newline' => "\r\n",
+  'wordwrap' => TRUE,
+  'mailtype' => 'html'
+  // 'priority' => 5
+);
