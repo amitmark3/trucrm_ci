@@ -10,13 +10,18 @@ class Excel{
     }
 
     public function load($path) {
-        $objReader = PHPExcel_IOFactory::createReader('Excel5');
+		$inputFileType = PHPExcel_IOFactory::identify($path);
+        //$objReader = PHPExcel_IOFactory::createReader('Excel5');
+        $objReader = PHPExcel_IOFactory::createReader($inputFileType);
+		$objReader->setReadDataOnly(true);
         $this->excel = $objReader->load($path);
     }
 
     public function save($path) {
         // Write out as the new file
-        $objWriter = PHPExcel_IOFactory::createWriter($this->excel, 'Excel5');
+		$inputFileType = PHPExcel_IOFactory::identify($path);
+        //$objWriter = PHPExcel_IOFactory::createWriter($this->excel, 'Excel5');
+        $objWriter = PHPExcel_IOFactory::createWriter($this->excel, $inputFileType);
         return $objWriter->save($path);
     }
 

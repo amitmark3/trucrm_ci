@@ -745,6 +745,13 @@ class Companies extends Admin_Controller
 													 'null' => TRUE,
 													 'COMMENT' => 'callingstatus table id'
 											  ),
+							'sub_callingstatus_id' => array(
+													 'type' => 'INT',
+													 'constraint' => '11',
+													 'default' =>  '0',
+													 'null' => TRUE,
+													 'COMMENT' => 'callingstatus table id'
+											  ),
 							'updated_at' => array(
 													 'type' =>'timestamp',
 													 'default' => '0000-00-00 00:00:00',

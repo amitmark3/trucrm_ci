@@ -8,8 +8,8 @@ $lang['industry_type_heading_view'] = 'Industry Type Details ';
 $lang['industry_type_heading_print'] = 'Print Industry Type';
 
 /* FORM LABELS */
-$lang['industry_type_title_label'] = 'Title <span class="asterisk">*</span>';
-$lang['industry_type_sub_title_label'] = 'Sub (Parent) Title';
+$lang['industry_type_title_label'] = 'Industry 2 <span class="asterisk">*</span>';
+$lang['industry_type_sub_title_label'] = 'Industry 1';
 $lang['industry_type_label'] = 'Set as active? <span class="asterisk">*</span>';
 
 /* ERROR MESSAGES */

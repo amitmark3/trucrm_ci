@@ -121,7 +121,7 @@ class Flasher
     {
         $this->flash_message = $this->CI->session->flashdata('message');
         $ouput = '<div class="alert alert-' . $this->flash_message['type'] . ($this->flash_message['dismissable'] == true ? " alert-dismissable" : "") . '">';
-        if ($this->flash_message['dismissable'] == true)
+        if ($this->flash_message['dismissable'] == false)
         {
             $ouput .= '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>';
         }

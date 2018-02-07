@@ -37,7 +37,7 @@
                     "sortable": false,
                     "searchable": false,
                     "render": function ( data ) {
-                        return '<a href="<?= site_url('departments/view') ?>/'+data+'">'+data+'</a>';
+                        return '<a title="view" href="<?= site_url('departments/view') ?>/'+data+'">'+data+'</a>';
                     },
                 },
                 {

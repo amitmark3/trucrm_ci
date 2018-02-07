@@ -29,8 +29,8 @@ class Industrytype extends Account_Controller
         $this->load->library('datatables');
 
         $this->datatables->select("ca.id,
-		ca.name,
 		(select name from industrytype where id=ca.parent_id limit 1) as sub_name,
+		ca.name,
 		ca.updated_at, ca.status
 		");
         $this->datatables->from("industrytype ca");

@@ -118,58 +118,37 @@ $class_active = $this->uri->rsegments[1];
 			</li>
 			
 			<li class="header">Manage Project</li>
+
 			<li class="treeview">
-                <a href="#"><i class="fa fa-fire-extinguisher"></i> <span>Project Source</span> <i class="fa fa-angle-left pull-right"></i></a>
-                <ul class="treeview-menu">
-                    <li><a href="<?=site_url('')?>"><i class="fa fa-eye"></i> View Project Source</a></li>
-                    <li><a href="<?=site_url('')?>"><i class="fa fa-plus"></i> Create Project Source</a></li>
-                </ul>
-            </li>
-			<li class="treeview">
-				<a href="#"><i class="fa fa-bullhorn"></i> <span>Project Name </span> <i class="fa fa-angle-left pull-right"></i></a>
+				<a href="#"><i class="fa fa-bullhorn"></i> <span>Project</span> <i class="fa fa-angle-left pull-right"></i></a>
 				<ul class="treeview-menu">
-					<li><a href="<?=site_url('')?>"><i class="fa fa-eye"></i> View Project</a></li>
-					<li><a href="<?=site_url('')?>"><i class="fa fa-plus"></i> Create New Project</a></li>
-				</ul>
-			</li>
-			<li class="treeview">
-				<a href="#"><i class="fa fa-calendar"></i> <span>Purchasing Time </span> <i class="fa fa-angle-left pull-right"></i></a>
-				<ul class="treeview-menu">
-					<li><a href="<?=site_url('')?>"><i class="fa fa-eye"></i> View Purchasing Time</a></li>
-					<li><a href="<?=site_url('')?>"><i class="fa fa-plus"></i> Add Purchasing Time</a></li>
+					<li><a href="<?=site_url('project/')?>"><i class="fa fa-eye"></i> View Project</a></li>
+					<li><a href="<?=site_url('project/add')?>"><i class="fa fa-plus"></i> Create New Project</a></li>
 				</ul>
 			</li>
 			
-			<li class="treeview">
-				<a href="#"><i class="fa fa-graduation-cap"></i> <span>Calling Template </span> <i class="fa fa-angle-left pull-right"></i></a>
-				<ul class="treeview-menu">
-					<li><a href="<?=site_url('')?>"><i class="fa fa-eye"></i> View Template</a></li>
-					<li><a href="<?=site_url('')?>"><i class="fa fa-plus"></i> Create Template</a></li>
-				</ul>
-			</li>
-			
-			<li class="treeview">
+			<!--li class="treeview">
 				<a href="#"><i class="fa fa-file-text"></i> <span>Calling Lot </span> <i class="fa fa-angle-left pull-right"></i></a>
 				<ul class="treeview-menu">
 					<li><a href="<?=site_url('')?>"><i class="fa fa-eye"></i> View Calling Lot</a></li>
 					<li><a href="<?=site_url('')?>"><i class="fa fa-plus"></i> Create Calling Lot</a></li>
 				</ul>
-			</li>
+			</li-->
 			
-			<li class="treeview">
+			<!--li class="treeview">
 				<a href="#"><i class="fa fa-graduation-cap"></i> <span>Calling Batch</span> <i class="fa fa-angle-left pull-right"></i></a>
 				<ul class="treeview-menu">
 					<li><a href="<?=site_url('')?>"><i class="fa fa-eye"></i> View Calling Batch</a></li>
 					<li><a href="<?=site_url('')?>"><i class="fa fa-plus"></i>Create Calling Batch</a></li>
 				</ul>
-			</li>			
+			</li-->			
 			
 			<li class="header">Manage Data</li>
 			
 			<li class="treeview">
                 <a href="#"><i class="fa fa-file-text"></i> <span>Data Allocation</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="<?=site_url('')?>"><i class="fa fa-eye"></i> Manage Filter Criteria</a></li>
+                    <li><a href="<?=site_url('dataallocation')?>"><i class="fa fa-eye"></i> Manage Filter Criteria</a></li>
                     <li><a href="<?=site_url('')?>"><i class="fa fa-upload"></i> Allocate Data Calling</a></li>
 					<li><a href="<?=site_url('')?>"><i class="fa fa-upload"></i> View Allocation History</a></li>
 					<li><a href="<?=site_url('')?>"><i class="fa fa-upload"></i> Manage Close File</a></li>
@@ -178,8 +157,8 @@ $class_active = $this->uri->rsegments[1];
 			<li class="treeview">
                 <a href="#"><i class="fa fa-medkit"></i> <span>Master Data</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-					<li><a href="<?=site_url('masterdata/uploads')?>"><i class="fa fa-cloud-upload"></i>Upload Master Data</a></li>
-					<li><a href="<?=site_url('')?>"><i class="fa fa-eye"></i>View Master Data</a></li>
+					<li><a href="<?=site_url('masterdata/uploadexcel')?>"><i class="fa fa-cloud-upload"></i>Upload Master Data</a></li>
+					<li><a href="<?=site_url('masterdata')?>"><i class="fa fa-eye"></i>View Master Data</a></li>
                     <li><a href="<?=site_url('')?>"><i class="fa fa-plus"></i>Lead Data</a></li>
                     <li><a href="<?=site_url('')?>"><i class="fa fa-plus"></i>Calling Data</a></li>
                     <li><a href="<?=site_url('')?>"><i class="fa fa-plus"></i>Freeze Data</a></li>

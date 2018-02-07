@@ -8,8 +8,8 @@ $lang['calling_status_heading_view'] = 'Calling Status Details ';
 $lang['calling_status_heading_print'] = 'Print Calling Status';
 
 /* FORM LABELS */
-$lang['calling_status_title_label'] = 'Title <span class="asterisk">*</span>';
-$lang['calling_status_sub_title_label'] = 'Sub (Parent) Title';
+$lang['calling_status_title_label'] = 'Calling Status2 <span class="asterisk">*</span>';
+$lang['calling_status_sub_title_label'] = 'Calling Status1';
 $lang['calling_status_label'] = 'Set as active? <span class="asterisk">*</span>';
 
 /* ERROR MESSAGES */

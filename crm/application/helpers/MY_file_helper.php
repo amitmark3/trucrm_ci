@@ -133,13 +133,14 @@ if ( ! function_exists('uploadfile_image'))
 					//return FALSE;
 				}else{
 					$upload_image_data = $CI->upload->data ();
-					$img_data['full_path'] = $upload_image_data['full_path'];
-					$img_data['file_name'] = $upload_image_data['file_name'];
+					$img_data = $upload_image_data;
+					//$img_data['full_path'] = $upload_image_data['full_path'];
+					//$img_data['file_name'] = $upload_image_data['file_name'];
 					$img_data['error'] = '';
 					//$data['full_path'] = $path.$new_name;
 					//$data['file_name'] = $new_name;
 					
-					//print_r($data);die;
+					//print_r($upload_image_data);die;
 					//return $data; //return the uploaded file name
 					// Start for create Thumb
 					if($create_thumb==TRUE){
@@ -226,7 +227,8 @@ if ( ! function_exists('uploadfile_type'))
 			$finfo = finfo_open(FILEINFO_MIME_TYPE);
 			$mime_type = finfo_file($finfo, $file_path);
 			finfo_close($finfo);
-			$file_size = $_FILES[ $field ][ 'size' ];
+			$file_size_kb = $_FILES[ $field ][ 'size' ];
+			$file_size = round(($file_size_kb/1024));
 			//print_r($mime_type);die;
 			
 			//For Video
@@ -248,7 +250,7 @@ if ( ! function_exists('uploadfile_type'))
 			$allowed_file_size = $allowed_file_size==''?'8000000':$allowed_file_size;
 			$data = array();
 			//echo '<pre>'; print_r($allowed);	echo "<br/>"; print_r($mime_type);		die;
-			
+			//echo $allowed_file_size.'<'.$file_size; die;
 			if(!in_array($mime_type, $allowed)) {
 				//echo 'asdf';die;
 				$data['error'] = 'Invalid file type';

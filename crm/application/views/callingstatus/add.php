@@ -4,15 +4,16 @@
             <?= form_open('calling/status/add', ['id' => 'add-calling-status-form']) ?>
             <div class="box-body">
 				<div class="row">
+					<div class="form-group col-xs-12 col-md-6">
+                            <?= form_label(lang('calling_status_sub_title_label'), 'parent_id'); ?>
+                            <?= form_dropdown('parent_id', $callingstatus_dropdown, null, ['id' => 'parent_id']); ?>
+                    </div>
                     <div class="form-group col-xs-12 col-md-6">
                         <?= form_label(lang('calling_status_title_label'), 'callingstatus_name') ?>
                          <?= form_input(['name'=>'callingstatus_name','type' => 'text','id' => 'callingstatus_name',  'class' => 'form-control' ,'required'=>'required','maxlength'=>'150'], set_value('callingstatus_name')) ?>
                         <?= form_error('callingstatus_name') ?>
                     </div>
-					<div class="form-group col-xs-12 col-md-6">
-                            <?= form_label(lang('calling_status_sub_title_label'), 'parent_id'); ?>
-                            <?= form_dropdown('parent_id', $callingstatus_dropdown, null, ['id' => 'parent_id']); ?>
-                    </div>
+					
                 </div>
 				<div class="row">
                     <div class="form-group col-xs-12 col-sm-8 col-md-6 col-lg-5">

@@ -29,12 +29,12 @@ class Callingstatus extends Account_Controller
         $this->load->library('datatables');
 
         $this->datatables->select("ca.id,
-		ca.name,
 		(select name from callingstatus where id=ca.parent_id limit 1) as sub_name,
+		ca.name,
 		ca.updated_at, ca.status
 		");
         $this->datatables->from("callingstatus ca");
-        $this->datatables->where('ca.companies_id', $this->user->company_id);
+        $this->datatables->where(['ca.companies_id'=> $this->user->company_id,'ca.parent_id!='=>0]);
 		$this->datatables->add_column('edit', anchor('calling/status/edit/$1', '<i class="fa fa-lg fa-pencil-square"></i>', ['id' => '$1', 'title'=>'Edit']). ' ' . anchor('callingstatus/delete/$1', '<i class="fa fa-lg fa-times-circle-o"></i>', ['class' => 'confirm', 'id' => '$1', 'title'=>'Delete']), 'id');
 		//echo $this->db->last_query();die;
         echo $this->datatables->generate();

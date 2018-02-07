@@ -10,7 +10,7 @@
                                 <input required ="true" type="file" id="importfile" name="excel_file">
                             </div>
                             <input type="submit" value="Upload" class="btn btn-success" />
-							<?= anchor('downloads/template_import_master_data.csv', 'Download CSV Template', ['class' => 'btn btn-success']) ?>
+							<?= anchor('downloads/template_master_data_xls.xls', 'Download CSV Template', ['class' => 'btn btn-success']) ?>
                         <?= form_close() ?>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
                 <p>There are data source to choose from:</p>
                 <p>1. DNA-DATA <br>2. FUNDOO-DATA etc.</p>
                
-                <?= anchor('downloads/template_import_master_data.csv', 'Download CSV Template', ['class' => 'btn btn-success']) ?>
+                <?= anchor('downloads/template_master_data_xls.xls', 'Download CSV Template', ['class' => 'btn btn-success']) ?>
                 <!-- <?= anchor('downloads/import.xlsx', 'Download Excel Template', ['class' => 'btn btn-success']) ?> -->
             </div>
         </div>

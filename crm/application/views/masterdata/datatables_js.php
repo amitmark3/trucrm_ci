@@ -1,6 +1,6 @@
 <script type="text/javascript">
     $(document).ready(function() {
-        var table = $('#calling_status_data').DataTable( {
+        var table = $('#masterdata_data').DataTable( {
             "searching": true,
             "processing": true,
             "serverSide": true,
@@ -51,16 +51,16 @@
                     "sortable": false,
                     "searchable": false,
                 },
-				{
+				/*{
                     "targets": [2],
                     "searchable": false,
-                },
-                /*{
+                },*/
+                {
                     "targets": 0,
                     "render": function ( data ) {
-                        return '<a href="<?= site_url('calling/status/view') ?>/'+data+'">'+data+'</a>';
+                        return '<a title="View" href="<?= site_url('masterdata/view') ?>/'+data+'">'+data+'</a>';
                     },
-                },*/
+                },
                 {
                     "targets": [3],
                     "render": function(data) {
@@ -99,9 +99,9 @@
     $(document).on("click", ".confirm", function(e) {
         e.preventDefault();
         var id = $(this).attr('id');
-        var url = '<?= site_url('calling/callingstatus/delete') ?>';
+        var url = '<?= site_url('masterdata/delete') ?>';
         bootbox.dialog({
-            message: "Are you sure you want to delete this calling status?",
+            message: "Are you sure you want to delete this master data?",
             title: "Please Confirm",
             buttons: {
                 danger: {

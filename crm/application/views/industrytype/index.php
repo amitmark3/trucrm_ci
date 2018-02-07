@@ -10,8 +10,8 @@
                         <thead>
                             <tr>
                                 <th class="no-print">View</th>
-                                <th>Title</th>
-                                <th>Parent Title</th>
+                                <th>Industry 1</th>
+								<th>Industry 2</th>
                                 <th>Date</th>
                                 <th>Status</th>
                                 <th class="no-print">Action</th>
